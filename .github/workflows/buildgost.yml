@@ -22,7 +22,7 @@ jobs:
          run: bash scripts/github/workflows/buildgost.sh
 
        - name: Upload Gost To Artifact
-         uses: actions/upload-artifact@v5
+         uses: actions/upload-artifact@v6
          if: steps.buildgost.outputs.status == 'success' && !cancelled()
          with:
            name: gost
